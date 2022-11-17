@@ -1,0 +1,19 @@
+﻿Abstract for the Cognida Coding Challenge:
+
+
+Approach: The dataset provided (Salary Dataset) consisted of a lot of inconsistent values in the salaries column. The first step required was to convert the categorical salary data into numerical or float data.
+
+
+Data cleaning and preprocessing: The major part of this challenge was to clean the data so that it is ready to be processed. The major part of data cleaning dealt with the ‘Salary’ column. As the data had values in dollars, pound, indian rupee as well as AFN, we have to first convert all the different currencies to just one of the above mentioned. I chose to convert them into INR(Rs). 
+The data also consisted of some salaries being measured yearly while some being measured hourly and monthly. To achieve uniformity ,the hourly and monthly salaries are also converted to yearly salaries using some custom defined functions.
+For the hourly to yearly conversion, we assumed that a worker works for 8 hours a day and for 5 days a week. This implies that yearly they work for 1920 hours, hence we multiply the hourly salary by 1920 to obtain yearly salary.
+
+
+After obtaining the consistent data, the main part is to visualise data in such a way to obtain the desirable solution. My main approach in obtaining the final output salaries was to analyse data in such a way that we obtain the mean salary for all respective job titles with respect to the required location. The mean or the average salary obtained in the outcome would be the approximate to the required salary output. Data cleaning and data visualisation and analysing played the most integral part in my approach to this problem. To visualise my data in the best possible way with the help of bar graphs and histograms, I used the machine libraries matplotlib.pyplot, plotly and seaborn. And for the data cleaning part I majorly made use of the pandas and numpy library. 
+
+
+Data visualisation: The main idea was to derive a relation between Location, job title and salary in such a way that we are able to retrieve the average salaries offered to different job titles with respect to location. Int this particular problem statement, our aim was to find the appropriate salary for the selected roles in the city of Hyderabad, hence we could derive that using a data frame consisting of salary( rs/yr), Location: {Hyderabad} and Job Title: { Lead Data scientist, Data scientist, Data analyst, machine learning engineer.}
+No machine learning algorithms like linear regression or random forest were used to draw the output from the data as the required information could be generated just through data analysis. 
+
+
+The conclusion drawn from the model depicts that the salary offered to data engineers in Hyderabad is the highest followed by data scientists.
